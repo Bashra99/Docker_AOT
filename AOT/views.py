@@ -5,9 +5,14 @@ from .models import AOT
 from .serializers import AOTSerializer
 # Create your views here.
 
-class AOTListView(ListAPIView):
+class AOTListView(ListCreateAPIView):
     queryset = AOT.objects.all()
     serializer_class= AOTSerializer
+
+
+# class AOTCreateView(ListCreateAPIView):
+#     queryset = AOT.objects.all()
+#     serializer_class= AOTSerializer
 
 class AOTDetailView(RetrieveUpdateDestroyAPIView):
     queryset = AOT.objects.all()
